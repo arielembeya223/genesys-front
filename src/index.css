@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Instrument Serif', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-ink: #0a0a0a;
+  --color-ink-2: #1a1a1a;
+  --color-ink-3: #2e2e2e;
+  --color-gray-1: #f5f5f5;
+  --color-gray-2: #ebebeb;
+  --color-gray-3: #d4d4d4;
+  --color-gray-4: #9e9e9e;
+  --color-gray-5: #6b6b6b;
+  --color-paper: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #fafafa;
+  color: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbars by default, show on hover/scroll */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 2px;
+  opacity: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+}
+
+/* Hexagon clip path utility */
+.hex-clip {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+.hex-clip-sm {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+/* Smooth transitions */
+.transition-base {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Story ring for hexagon */
+.hex-ring {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+/* Masonry grid for search */
+.masonry-grid {
+  columns: 2;
+  column-gap: 12px;
+}
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    columns: 3;
+    column-gap: 16px;
+  }
+  .masonry-grid > * {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry-grid {
+    columns: 4;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input focus */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Selection */
+::selection {
+  background: #0a0a0a;
+  color: #ffffff;
+}

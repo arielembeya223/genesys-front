@@ -1,0 +1,10 @@
+{
+  "description": "Connect with fellow students and enhance your academic journey through a premium social network featuring messaging, discovery, and AI assistance.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
